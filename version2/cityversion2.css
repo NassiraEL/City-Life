@@ -57,7 +57,7 @@ body {
 }
 
 
-.cuboid .side:nth-of-type(1) {
+.cuboid .side {
     /*front side*/
 	--sat: 40%;
 	transform: translate3d(-50%, -50%, calc(var(--depth) * 0.5vmin));
@@ -117,6 +117,10 @@ body {
 
 .floor .side { border: 3px solid var(--frame); }
 
+.floor.two { bottom: 5vmin; }
+.floor.three { bottom: 15vmin; }
+
+
 .floor .side:nth-of-type(1) {
 	background: 
 		conic-gradient(from 116deg at 0 0, var(--luz2) 0 25%, #fff0 0 100%), 
@@ -138,6 +142,10 @@ body {
 	background: var(--lines-side), hsl(var(--hue) var(--sat) 40% / 0.5);
 	background-size: 35.45% 100%;
 }
+
+
+
+
 /*** ROOF ***/
 
 .roof {    
@@ -149,14 +157,14 @@ body {
 	transform: rotateY(-8deg) rotateX(5deg)  translateZ(-18vmin);
 }
 
+.roof.two { bottom: 13vmin; }
 
 /*** AIR COOLER ***/
-
 .air-cooler {
 	--height: 3.9;
 	--width: 10;
 	--depth: 52;
-	bottom: 8.5vmin;
+	bottom: 18.5vmin;
 	left: 25vmin;
 }
 
@@ -164,7 +172,7 @@ body {
 	--height: 2.4;
 	--width: 5;
 	--depth: 20;
-	bottom: 8.5vmin;
+	bottom: 18.5vmin;
 	left: 42vmin;
 	transform: rotateY(-8deg) rotateX(5deg) translateZ(-7vmin);
 }
@@ -182,6 +190,7 @@ body {
 	margin: 0.5vmin;
 	background-size: 100% 25%;
 }
+
 
 /*** BLINDS ***/
 
@@ -213,6 +222,19 @@ body {
 }
 
 
+.floor.two .side:nth-of-type(1):before {
+	width: 59.5%;
+	left: 40.75%;
+	box-shadow: 0.2vmin 0.5vmin 0.25vmin 0.25vmin #0006 inset;
+}
+.floor.two .side:nth-of-type(1):after {
+	width: 20%;
+	left: -1px;
+	box-shadow: none;
+	box-shadow: 0vmin 0.65vmin 0.25vmin 0.25vmin #0006 inset;
+	background-color: #3d4176;
+}
+
 
 
 /***  RIGHT SIDE  ***/
@@ -235,4 +257,19 @@ body {
 	left: 35.25%;
 }
 
+/* F 2 */
+.floor.two .side:nth-of-type(3) span,
+.floor.four .side:nth-of-type(3) span {
+	left: 71%;
+	width: 29%;
+	background: linear-gradient(-5deg, #fff0 76%, var(--luz2) calc(76% + 1px)), var(--luz1);
+}
+.floor.two .side:nth-of-type(3) span:before {
+	width: 5vmin;
+	bottom: 0.8vmin;
+	top: inherit;
+	background: var(--luz2);
+	box-shadow: none;
+	left: 10vmin;
+}
 

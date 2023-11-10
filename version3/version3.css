@@ -118,6 +118,7 @@ body {
 .floor .side { border: 3px solid var(--frame); }
 
 .floor.two { bottom: 5vmin; }
+.floor.three { bottom: 15vmin; }
 
 
 .floor .side:nth-of-type(1) {
@@ -157,13 +158,14 @@ body {
 }
 
 .roof.two { bottom: 13vmin; }
+.roof.three { bottom: 23vmin; }
 
 /*** AIR COOLER ***/
 .air-cooler {
 	--height: 3.9;
 	--width: 10;
 	--depth: 52;
-	bottom: 18.5vmin;
+	bottom: 28.5vmin;
 	left: 25vmin;
 }
 
@@ -171,7 +173,7 @@ body {
 	--height: 2.4;
 	--width: 5;
 	--depth: 20;
-	bottom: 18.5vmin;
+	bottom: 28.5vmin;
 	left: 42vmin;
 	transform: rotateY(-8deg) rotateX(5deg) translateZ(-7vmin);
 }
@@ -275,6 +277,20 @@ span {
 }
 
 
+
+/* F 3 */
+.floor.three .side:nth-of-type(1):after {
+	background: #1c1f3e;
+	left: 40.25%;
+	width: 19.75%;
+	box-shadow: 0.2vmin 0.525vmin 0.5vmin 0.125vmin #0006 inset;
+}
+
+.floor.three .side:nth-of-type(1):before {
+	display: none;
+}
+
+
 /***  RIGHT SIDE  ***/
 
 .floor .side:nth-of-type(3):before,
@@ -297,7 +313,7 @@ span {
 
 
 /* F 2 */
-.floor.two .side:nth-of-type(3) span{
+.floor.two .side:nth-of-type(3) span {
 	left: 71%;
 	width: 29%;
 	background: linear-gradient(-5deg, #fff0 76%, var(--luz2) calc(76% + 1px)), var(--luz1);
@@ -311,3 +327,30 @@ span {
 	left: 10vmin;
 }
 
+
+/* F 3 */
+.floor.three .side:nth-of-type(3):before, .floor.three .side:nth-of-type(3):after {
+	left: 70.75%;
+	width: 29.25%;
+}
+
+.floor.three .side:nth-of-type(3) span {
+	width: 69.5%;
+	left: 0;
+	background: #fff0;
+}
+
+.floor.three .side:nth-of-type(3) span:before,
+.floor.three .side:nth-of-type(3) span:after {
+	content: "";
+	position: absolute;
+	width: 48.5%;
+	height: 100%;
+	left: 0;
+	background: linear-gradient(175.25deg, var(--luz2) 51.5%, var(--luz3) calc(51.5% + 1px)), var(--luz1);
+}
+
+.floor.three .side:nth-of-type(3) span:after {
+	left: 51%;
+	background: linear-gradient(175.25deg, var(--luz2) 25%, var(--luz3) calc(25% + 1px)), var(--luz1);
+}

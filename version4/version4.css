@@ -19,6 +19,10 @@ body {
 
 .content {
 	--frame: #070b32;
+	--bush: #181b38;
+	--dot1: radial-gradient(circle at 50% 50%, var(--bush) 0 0.25vmin, #fff0 calc(0.25vmin + 1px) 100%);
+	--dot2: radial-gradient(circle at 50% 50%, var(--bush) 0 0.5vmin, #fff0 calc(0.5vmin + 1px) 100%);
+	--dot3: radial-gradient(circle at 50% 50%, var(--bush) 0 1.15vmin, #fff0 calc(1.15vmin + 1px) 100%);
 	--glass: 337deg;
 	--luz1: hsl(var(--glass) 60% 50% / 60%);
 	--luz2: hsl(var(--glass) 54% 32%);
@@ -28,8 +32,6 @@ body {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-    position: relative;
-    bottom: 30%;
 }
 
 
@@ -201,7 +203,7 @@ body {
 
 /*** WINDOWS ***/
 
-span {
+span { /* glass of  the open windows floor 2 and 5*/
 	background: linear-gradient(32deg, #fff0 17%, var(--luz2) 19%), var(--luz1);
 	position: absolute;
 	width: 20%;
@@ -210,7 +212,7 @@ span {
 }
 
 
-/* F 2 */
+/* F 2 */ /* redeau for open windows floor 2 and 5 */
 .floor.two .side span:before ,
 .floor.five .side span:before {
 	content: "";
@@ -226,10 +228,12 @@ span {
 
 
 
+
 /*** BLINDS ***/
 
 .floor .side:nth-of-type(1):before, .floor .side:nth-of-type(1):after, 
 .floor .side:nth-of-type(3):before, .floor .side:nth-of-type(3):after {
+	/* blinds for front and right side (TOP TO BOTTOM) */
 	position: absolute;
 	content: "";
 	width: 40%;
@@ -240,9 +244,9 @@ span {
 }
 
 .floor .side:nth-of-type(1):after {
+	/* delete windows 4 and 5 for */
 	width: 20%;
 	left: 80.25%;
-
 }
 
 
@@ -308,11 +312,13 @@ span {
 
 .floor.four .side:nth-of-type(1):before {
 	background: repeating-linear-gradient(90deg, black, transparent), linear-gradient(94deg, #fff0 41%, #000 calc(42% + 1px) 52%, #fff0 52%), linear-gradient(-95deg, #fff0 45%, #000 calc(46% + 1px) 55%, #fff0 55%), var(--lines-front), repeating-linear-gradient(90deg, #364e69, #141f59);
-	background-size: 0.375vmin 100%, 100% 100%, 100% 100%, 33.6% 100%, 4% 100%;
+	background-size: 0.375vmin 100%, 100% 100%, 100% 100%, 33.6% 100%, 4% 100%;/*width of line for the blind*/
 	left: 0;
 }
 
+
 .roof.four .side:nth-child(1):before {
+	/* flowers of stage 5 in window 4 */
 	content: "";
 	position: absolute;
 	width: 25%;
@@ -332,6 +338,7 @@ span {
 }
 
 .floor.five .side:nth-child(1) span:after {
+	/* part of the door for the stage 5 */
 	content: "";
 	position: absolute;
 	width: 2vmin;
@@ -340,17 +347,21 @@ span {
 	left: 29.7vmin;
 	background: var(--luz3);
 	background-size: 100% 0.35vmin;
-	box-shadow: -2px -20.1vmin 0 0 var(--luz3);
+	/* box-shadow: -2px -20.1vmin 0 0 var(--luz3); */
 	color: #601d44;
 	z-index: 3;
 	transform: translateZ(1.8vmin);
+	
 }
 
 .floor.five .side:nth-of-type(1):after {
+	/* window 5 of stage 5 front side */
 	display: none;
 }
 
+
 .roof.five .side:nth-child(-n+4):before {
+	/* les fleurs qui se trouve dans l'etage 6 */
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -365,6 +376,7 @@ span {
 
 /* F 6 */
 .floor.six .side:nth-of-type(1):before {
+	/* two first windows of stage 6  (front side)*/
 	left: -0.1vmin;
 	box-shadow: 0.025vmin 0.7vmin 0.25vmin 0.125vmin #0006 inset;
 	width: 40.25%;
@@ -373,6 +385,7 @@ span {
 }
 
 .floor.six .side:nth-of-type(1):after {
+	/* two last windows of stage 6  (front side)*/
 	left: 60%;
 	width: 40%;
 	background: repeating-linear-gradient(90deg, #101010, transparent), repeating-linear-gradient(90deg, #383e70 0 calc(100% - 0.25vmin), var(--frame) calc(100% - 0.25vmin) 100%);
@@ -415,6 +428,7 @@ span {
 	background: linear-gradient(-5deg, #fff0 76%, var(--luz2) calc(76% + 1px)), var(--luz1);
 }
 .floor.two .side:nth-of-type(3) span:before {
+	/* shadow of flower in the stage 2 right side */
 	width: 5vmin;
 	bottom: 0.8vmin;
 	top: inherit;
@@ -431,6 +445,7 @@ span {
 }
 
 .floor.three .side:nth-of-type(3) span {
+	/* back  of window 2 of stage 3 at right side */
 	width: 69.5%;
 	left: 0;
 	background: #fff0;
@@ -438,6 +453,7 @@ span {
 
 .floor.three .side:nth-of-type(3) span:before,
 .floor.three .side:nth-of-type(3) span:after {
+	/* two left windows of right side at stage 3 */
 	content: "";
 	position: absolute;
 	width: 48.5%;
@@ -447,6 +463,7 @@ span {
 }
 
 .floor.three .side:nth-of-type(3) span:after {
+	/* window 2 of stage 3 at right side */
 	left: 51%;
 	background: linear-gradient(175.25deg, var(--luz2) 25%, var(--luz3) calc(25% + 1px)), var(--luz1);
 }
@@ -455,12 +472,14 @@ span {
 
 /* F 4 */
 .floor.four .side:nth-of-type(3):before, .floor.four .side:nth-of-type(3):after {
+		/* window 2 of stage 4 at right side */
 	left: 35.25%;
 	background: repeating-linear-gradient(90deg, #1d1e26, transparent), repeating-linear-gradient(90deg, #383e70 0 calc(100% - 0.25vmin), var(--frame) calc(100% - 0.25vmin) 100%);
 	background-size: 2.5vmin 100%, 33vmin 100%;
 }
 
 .floor.four .side:nth-of-type(3):after {
+	/* first window of stage 4 at right side */
 	left: 0%;
 	background: var(--luz3);
 	box-shadow: none;
@@ -482,6 +501,7 @@ span {
 }
 
 .floor.four .side:nth-of-type(3) span:after {
+	/* shadow in 3th window at stage 4 right side */
 	content: "";
 	position: absolute;
 	width: 3.5vmin;
@@ -496,6 +516,7 @@ span {
 
 /* F 5 */
 .floor.five .side:nth-of-type(3):before{
+	/* window 2 */
 	left: 35.25%;
 	width: 34.25%;
 	top: -1px;
@@ -504,6 +525,7 @@ span {
 }
 
 .floor.five .side:nth-of-type(3):after{
+	/* window 3 */
 	left: 70.75%;
 	width: 29.25%;
 	top: -1px;
@@ -512,16 +534,19 @@ span {
 }
 
 .roof.five .side:nth-child(3):before {
+	/* flowers in the right side  */
 	filter: drop-shadow(3vmin 0px 0px var(--bush)) drop-shadow(6vmin 0px 0px var(--bush))  drop-shadow(10vmin 0px 0px var(--bush)) drop-shadow(-30vmin 0px 0px var(--bush))  drop-shadow(30vmin 1px 0px var(--bush)) drop-shadow(25px -2px 0px var(--bush)) drop-shadow(25px 0px 0px var(--bush));
 }
 
 .floor.five .side:nth-of-type(3) span{
+	/* first window (glass) */
 	left: 0%;
 	width: 33.5%;
 	background: conic-gradient(from 180deg at 70% 40%, var(--luz3) 0 23.65%,  var(--luz2) 0 100% );
 }
 
 .floor.five .side:nth-of-type(3) span:before {
+	/* part2 of the door */
 	display: none;
 	left: 0%;
 	bottom: 2vmin;
@@ -544,3 +569,275 @@ span {
 .floor.six .side:nth-of-type(3):after {
 	left: 35.25%;
 }
+
+
+
+
+/*** CACTUS ***/
+i.cactus {
+	background: var(--bush);
+	width: 0.85vmin;
+	height: 2vmin;
+	position: absolute;
+	bottom: 3vmin;
+	left: 3px;
+	border-radius: 100% 100% 10% 45%;
+	transform: rotate(-2deg);
+}
+
+i.cactus:before {
+	content: "";
+	position: absolute;
+	background: var(--bush);
+	width: 0.75vmin;
+	height: 2vmin;
+	bottom: 1.4vmin;
+	left: -0.35vmin;
+	border-radius: 100%;
+}
+
+i.cactus:after {
+	content: "";
+	position: absolute;
+	background: var(--bush);
+	width: 0.5vmin;
+	height: 1.5vmin;
+	bottom: 3vmin;
+	left: 0.075vmin;
+	border-radius: 100%;
+	box-shadow: -0.6vmin 0.2vmin 0 -0.075vmin var(--bush), 0.4vmin 1.5vmin 0 -0.075vmin var(--bush);
+}
+
+.roof.six .cactus {
+	left: 90%;
+	transform: rotateY(60deg) rotate(-1deg);
+	border-radius: 0% 100%;
+	filter: drop-shadow(-2px 1px 0px #434770cc);
+}
+
+
+
+
+/*** FLOWERS ***/
+i.flowers {
+	
+	background: var(--luz3);
+	width: 70%;
+	height: 1vmin;
+	position: absolute;
+	bottom: 1vmin;
+	left: 15%;
+}
+
+i.flowers:before {
+	content: "";
+	position: absolute;
+	background: var(--luz3);
+	width: 0.75vmin;
+	height: 2vmin;
+	bottom: 0;
+	left: 60%;
+}
+
+i.flowers:after {
+	content: "";
+	position: absolute;
+	background: conic-gradient(from -22deg at 50% 100%, var(--luz3) 0 2%, #fff0 0 5%, var(--luz3) 0 7%, #fff0 0 10%, var(--luz3) 0 12%, #fff0 0 100%), 
+		radial-gradient(circle at 50% 0.25vmin, var(--luz3) 0 0.25vmin, #fff0 0 100%), 
+		radial-gradient(circle at 25% 0.45vmin, var(--luz3) 0 0.25vmin, #fff0 0 100%), 
+		radial-gradient(circle at 80% 0.4vmin, var(--luz3) 0 0.25vmin, #fff0 0 100%);
+	width: 1.5vmin;
+	height: 1.5vmin;
+	bottom: 1.5vmin;
+	left: 52%;
+}
+
+/*** BUSH ***/
+i.bush {
+	background: var(--bush);
+	width: 0.95vmin;
+	height: 2vmin;
+	position: absolute;
+	bottom: 3vmin;
+	left: 3px;
+	border-radius: 100% 100% 10% 45%;
+	transform: rotate(-2deg);
+}
+
+i.bush:before {
+	content: "";
+	position: absolute;
+	background: var(--bush);
+	width: 0.5vmin;
+	height: 1.25vmin;
+	bottom: 0.4vmin;
+	left: -0.3vmin;
+	border-radius: 100%;
+	transform: rotate(-24deg);
+}
+
+i.bush:after {
+	content: "";
+	position: absolute;
+	background: var(--bush);
+	width: 0.5vmin;
+	height: 1.5vmin;
+	bottom: 1.7vmin;
+	left: -0.075vmin;
+	border-radius: 100%;
+	box-shadow: -0.36vmin 0.5vmin 0 -0.075vmin var(--bush), 0.4vmin 0.75vmin 0 -0.025vmin var(--bush), 0.3vmin 0.25vmin 0 -0.025vmin var(--bush);
+	transform: rotate(-16deg);
+}
+
+.roof.two .side:nth-child(1) i.bush {
+	filter: drop-shadow(19px 6px 0px var(--luz2));
+	transform: translateZ(-1vmin);
+}
+
+.roof.two .side:nth-child(3) i.bush {
+	left: 91%;
+	bottom: 2.95vmin;
+	transform: rotateY(128deg);
+	border-radius: 100% 100% 10% 40%;
+	filter: drop-shadow(0.85vmin 11vmin 0px var(--bush)) drop-shadow(-2px -1px 0px #5a5d85);
+}
+
+.roof.four .side:nth-child(1) i.bush {
+	transform: rotateY(180deg) scale(0.85) scaleX(0.65) rotate(92deg);
+	border-radius: 100% 100% 10% 40%;
+	bottom: 2.35vmin;
+	left: 4px;
+	filter: drop-shadow(45.55vmin -7px 0px var(--bush)) drop-shadow(-11.75vmin 2px 0px var(--bush));
+}
+
+.roof.six .side:nth-child(1) i.bush {
+	transform: rotateY(180deg) scaleY(1.5) scaleX(0.65) rotate(92deg);
+	border-radius: 100% 100% 10% 40%;
+	bottom: 2.75vmin;
+	left: 5px;
+	filter: drop-shadow(40vmin 0 0px var(--bush)) drop-shadow(12.95vmin -1px 0px var(--bush));
+}
+
+
+/*** MAN ***/
+i.man {
+	background: radial-gradient(circle at 50% 0.4vmin, var(--bush) 0 0.35vmin, #fff0 calc(0.35vmin + 1px) 100%),radial-gradient(circle at 50% 0.35vmin, #0c0d1c 0 0.35vmin, #fff0 calc(0.35vmin + 1px) 100%), conic-gradient(from 137deg at 50% 0.51vmin, var(--bush) 0 25%, #fff0 0 100%);
+	width: 1.5vmin;
+	height: 3.5vmin;
+	position: absolute;
+	bottom: 1.25vmin;
+	left: 10.5vmin;
+	z-index: 1;
+	transform: rotate(-1deg);
+	border-radius: 1vmin 100% 0 0;
+}
+
+i.man:before {
+	content: "";
+	background: var(--bush);
+	width: 1vmin;
+	height: 1vmin;
+	border-radius: 0.3vmin;
+	position: absolute;
+	bottom: 1.25vmin;
+	left: -0.25vmin;
+	transform: rotate(55deg);
+}  
+
+i.man:after {
+	content: "";
+}
+
+
+/*** CACTUS 2 ***/
+i.cactus2 {
+	background: var(--luz3);
+	width: 0.45vmin;
+	height: 4vmin;
+	position: absolute;
+	bottom: 1vmin;
+	left: 27vmin;
+	border-radius: 100% 100% 0 0;
+	transform: rotate(-7deg);
+}
+
+i.cactus2:before {
+	content: "";
+	position: absolute;
+	background: #fff0;
+	width: 0.75vmin;
+	height: 1vmin;
+	bottom: 1vmin;
+	left: -0.5vmin;
+	border-radius: 0 0 100% 100%;
+	border: 0.5vmin solid var(--luz3);
+	border-top-color: #fff0;
+	border-left-width: 0.35vmin;
+}
+
+i.cactus2:after {
+	content: "";
+	position: absolute;
+	background: var(--luz3);
+	width: 0.4vmin;
+	height: 0.75vmin;
+	bottom: 3.2vmin;
+	left: -0.05vmin;
+	border-radius: 100%;
+	box-shadow: -0.555vmin 0.75vmin 0 0 var(--luz3), 0.75vmin 0.65vmin 0 0 var(--luz3);
+}
+
+i.cactus2 + i.cactus2 {
+	transform: scale(0.85) translate(-2.25vmin, -0.1vmin) rotate(-5deg) rotateY(180deg);
+}
+
+
+
+/*** CAT ***/
+i.cat {
+	background: radial-gradient(circle at 50% 26%, var(--bush) 0 0.35vmin, #fff0 calc(0.35vmin + 1px) 100%), conic-gradient(from 125deg at 100% 0, var(--bush) 0 25%, #fff0 0 100%), conic-gradient(from 136deg at 0 0, var(--bush) 0 25%, #fff0 0 100%);
+	width: 0.75vmin;
+	height: 2.5vmin;
+	position: absolute;
+	bottom: 1.25vmin;
+	left: 2.3vmin;
+	transform: scale(0.85);
+}
+
+i.cat:before {
+	content: "";
+	background: var(--bush);
+	width: 1.8vmin;
+	height: 1.95vmin;
+	border-radius: 100% 39% 0 0;
+	position: absolute;
+	bottom: -0.35vmin;
+	left: -1vmin;
+}  
+
+i.cat:after {
+	content: "";
+	background: #fff0;
+	width: 1.65vmin;
+	height: 1.75vmin;
+	border-radius: 100%;
+	border-left: 0.35vmin solid var(--bush);
+	border-bottom: 0.35vmin solid #fff0;
+	border-top: 0.15vmin solid #fff0;
+	position: absolute;
+	bottom: 0.15vmin;
+	left: -1.25vmin;
+	transform: rotate(-20deg);
+}
+
+i.cat + i.cat {
+	transform: rotateY(180deg) scale(0.9);
+	left: 4vmin;
+}
+
+i.cat + i.cat:after {
+	transform: rotate(-27deg) rotateY(180deg);
+	left: -2.6vmin;
+	bottom: -0.2vmin;
+}
+

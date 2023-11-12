@@ -19,7 +19,7 @@ body {
 
 .content {
 	--frame:  #771166;
-	--bush: #181b38;
+	--bush: #aa6eaa;
 	--dot1: radial-gradient(circle at 50% 50%, var(--bush) 0 0.25vmin, #fff0 calc(0.25vmin + 1px) 100%);
 	--dot2: radial-gradient(circle at 50% 50%, var(--bush) 0 0.5vmin, #fff0 calc(0.5vmin + 1px) 100%);
 	--dot3: radial-gradient(circle at 50% 50%, var(--bush) 0 1.15vmin, #fff0 calc(1.15vmin + 1px) 100%);
@@ -199,7 +199,7 @@ body {
 	width: calc(100% - 1vmin);
 	height: calc(100% - 1vmin);
 	position: absolute;
-	background: repeating-linear-gradient(180deg, #000, #0a0d29 , #434770cc);
+	background: repeating-linear-gradient(180deg, #000, #883366 , #434770cc);
 	margin: 0.5vmin;
 	background-size: 100% 25%;
 }
@@ -283,7 +283,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 
 /* F 3 */
 .floor.three .side:nth-of-type(1):after {
-	background: #1c1f3e;
+	background: #771166;
 	left: 40.25%;
 	width: 19.75%;
 	box-shadow: 0.2vmin 0.525vmin 0.5vmin 0.125vmin #0006 inset;
@@ -303,7 +303,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 	width: 60%;
 	height: 100%;
 	left: 40%;
-	--luz1: #434770;
+	--luz1: #883366;
 	--lines-front: repeating-linear-gradient(90deg, var(--luz1) 0% calc(100% - 0.275vmin), var(--frame) calc(100% - 0.275vmin) 100%);
 	background: repeating-linear-gradient(90deg, black, transparent), linear-gradient(91deg, #fff0 35%, #000 calc(36% + 1px) 52%, #fff0 52%), linear-gradient(-91deg, #fff0 36%, #000 calc(37% + 1px) 55%, #fff0 55%), var(--lines-front), repeating-linear-gradient(90deg, #364e69, #141f59);
 	background-size: 0.35vmin 100%, 100% 100%, 100% 100%, 33.6% 100%, 4% 100%;
@@ -368,6 +368,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 
 .roof.five .side:nth-child(-n+4):before {
 	/* les fleurs qui se trouve dans l'etage 6 */
+    --bush: #aa6eaa;
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -549,7 +550,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 	left: 35.25%;
 	width: 34.25%;
 	top: -1px;
-	background: #2c315a;
+	background: #771166;
 	box-shadow: -1.975vmin 1.75vmin 1.5vmin 0.125vmin #0005 inset, 0.025vmin 1.75vmin 0.4vmin 0.125vmin #0002 inset;
 }
 
@@ -559,12 +560,13 @@ span { /* glass of  the open windows floor 2 and 5*/
 	left: 70.75%;
 	width: 29.25%;
 	top: -1px;
-	background: #2c315a;
+	background: #771166;
 	box-shadow: -1.975vmin 1.75vmin 1.5vmin 0.125vmin #0005 inset, 0.025vmin 1.75vmin 0.4vmin 0.125vmin #0002 inset;
 }
 
 .roof.five .side:nth-child(3):before {
 	/* flowers in the right side  */
+    --bush: #aa6eaa;
 	filter: drop-shadow(3vmin 0px 0px var(--bush)) drop-shadow(6vmin 0px 0px var(--bush))  drop-shadow(10vmin 0px 0px var(--bush)) drop-shadow(-30vmin 0px 0px var(--bush))  drop-shadow(30vmin 1px 0px var(--bush)) drop-shadow(25px -2px 0px var(--bush)) drop-shadow(25px 0px 0px var(--bush));
 }
 
@@ -651,6 +653,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 
 /*** CACTUS ***/
 i.cactus {
+    --bush:#aa6eaa;
 	background: var(--bush);
 	width: 0.85vmin;
 	height: 2vmin;
@@ -696,7 +699,7 @@ i.cactus:after {
 
 /*** FLOWERS ***/
 i.flowers {
-	
+	--luz3: #aa6eaa;
 	background: var(--luz3);
 	width: 70%;
 	height: 1vmin;
@@ -730,6 +733,7 @@ i.flowers:after {
 
 /*** BUSH ***/
 i.bush {
+    --bush: #aa6eaa;
 	background: var(--bush);
 	width: 0.95vmin;
 	height: 2vmin;
@@ -797,6 +801,7 @@ i.bush:after {
 
 /*** MAN ***/
 i.man {
+    --bush: #aa6eaa;
 	background: radial-gradient(circle at 50% 0.4vmin, var(--bush) 0 0.35vmin, #fff0 calc(0.35vmin + 1px) 100%),radial-gradient(circle at 50% 0.35vmin, #0c0d1c 0 0.35vmin, #fff0 calc(0.35vmin + 1px) 100%), conic-gradient(from 137deg at 50% 0.51vmin, var(--bush) 0 25%, #fff0 0 100%);
 	width: 1.5vmin;
 	height: 3.5vmin;
@@ -827,10 +832,10 @@ i.man:after {
 .eight .side i.man {
 	left: 39.75vmin;
 	bottom: 0vmin;
-	--bush: #363a5c;
+	--bush: #aa6eaa;
 	transform: translateZ(-90vmin);
-	filter: drop-shadow(1.2px 0px 0px #7d83bfcc);
-	color: #7d83bfcc;
+	filter: drop-shadow(1.2px 0px 0px #aa6eaa);
+	color: #aa6eaa;
 	background: radial-gradient(circle at 55% 0.9vmin, var(--bush) 0 0.35vmin, #fff0 calc(0.375vmin + 1px) 100%),radial-gradient(circle at 35% 0.8vmin, #0a0d29 0 0.5vmin, #fff0 calc(0.5vmin + 1px) 100%), conic-gradient(from 145deg at 50% 1.2vmin, var(--bush) 0 25%, #fff0 0 100%);
 	height: 4.5vmin;
 	width: 1.125vmin;
@@ -838,7 +843,7 @@ i.man:after {
 
 .eight .side i.man:before {
 	transform: rotate(-19deg);
-	border-right: 1px solid #ffffffab;
+	border-right: 1px solid #aa6eaa;
 	left: 0.125vmin;
 	width: 0.45vmin;
 	height: 1.85vmin;
@@ -851,6 +856,7 @@ i.man:after {
 
 /*** CACTUS 2 ***/
 i.cactus2 {
+    --luz3:#aa6eaa;
 	background: var(--luz3);
 	width: 0.45vmin;
 	height: 4vmin;
@@ -895,6 +901,7 @@ i.cactus2 + i.cactus2 {
 
 /*** CAT ***/
 i.cat {
+    --bush:#aa6eaa;
 	background: radial-gradient(circle at 50% 26%, var(--bush) 0 0.35vmin, #fff0 calc(0.35vmin + 1px) 100%), conic-gradient(from 125deg at 100% 0, var(--bush) 0 25%, #fff0 0 100%), conic-gradient(from 136deg at 0 0, var(--bush) 0 25%, #fff0 0 100%);
 	width: 0.75vmin;
 	height: 2.5vmin;
@@ -944,6 +951,8 @@ i.cat + i.cat:after {
 
 /*** PLANTS ***/
 i.plant {
+    --luz2: #aa6eaa;
+    --luz3: #aa6eaa;
 	position: absolute;
 	background: linear-gradient(90deg, #fff0 38%, var(--luz2) 38% 61%, #fff0 61%), linear-gradient(180deg, #fff0 40%, var(--luz2) 45%);
 	width: 1vmin;
@@ -982,3 +991,31 @@ i.plant:after {
 	box-shadow: 4px -4px 0 -0.05vmin var(--luz2), 8px -3px 0 -0.05vmin var(--luz2);
 }
 
+
+
+/*** LIGHTS ***/
+.lights {
+	position: absolute;
+	width: 52vmin;
+	height: 75vmin;
+	--foco: radial-gradient(circle at 50% 50%, var(--luz1) 0 0.1vmin, #fff0 calc(0.1vmin + 1px) 100%);
+	transform: rotateY(-8deg) rotateX(0deg) translateZ(22vmin) translateX(3vmin);
+	background:	
+		var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), 
+		var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), 
+		var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco),
+		var(--foco), var(--foco),
+		var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco), var(--foco),
+		var(--foco),
+		var(--foco), var(--foco);
+	background-position: 
+		6% 1%, 21% 1%, 11.5% 3.5%, 26% 3.5%, 90% 8%, 17% 6%,   
+		6% 15%, 11.5% 17%, 53.5% 15%, 58.5% 17%, 72.5% 17%, 67.5% 15%,  
+		6% 42%, 53.5% 42%, 67.5% 42%, 11.5% 44.25%, 26% 44%, 58.5% 44%, 72.5% 44%, 17% 46.5%, 63.5% 46.25%,
+		67.6% 55%, 73% 57%,
+		6% 68.5%, 21% 68.5%, 54% 68.5%, 68% 68.5%, 11.5% 71%, 27% 71%, 58.5% 71%, 73% 71%, 18% 73.5%, 64.5% 73.5%,
+		16.5% 86%,
+		6% 95.5%, 11.5% 98%;
+	background-repeat: no-repeat;
+	background-size: 1vmin 1vmin;
+}

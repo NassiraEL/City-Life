@@ -124,6 +124,8 @@ body {
 .floor.four { bottom: 25vmin; }
 .floor.five { bottom: 35vmin; }
 .floor.six { bottom: 45vmin; }
+.floor.seven { bottom: 55vmin; }
+.floor.eight { bottom: 65vmin; }
 
 
 .floor .side:nth-of-type(1) {
@@ -167,13 +169,15 @@ body {
 .roof.four { bottom: 33vmin; }
 .roof.five { bottom: 43vmin; }
 .roof.six { bottom: 53vmin; }
+.roof.seven { bottom: 63vmin; }
+.roof.eight { bottom: 73vmin; }
 
 /*** AIR COOLER ***/
 .air-cooler {
 	--height: 3.9;
 	--width: 10;
 	--depth: 52;
-	bottom: 58.5vmin;
+	bottom: 78.5vmin;
 	left: 25vmin;
 }
 
@@ -181,7 +185,7 @@ body {
 	--height: 2.4;
 	--width: 5;
 	--depth: 20;
-	bottom: 58.5vmin;
+	bottom: 78.5vmin;
 	left: 42vmin;
 	transform: rotateY(-8deg) rotateX(5deg) translateZ(-7vmin);
 }
@@ -212,7 +216,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 }
 
 
-/* F 2 */ /* redeau for open windows floor 2 and 5 */
+/* F 2 */ /* blind for open windows floor 2 and 5 */
 .floor.two .side span:before ,
 .floor.five .side span:before {
 	content: "";
@@ -291,7 +295,9 @@ span { /* glass of  the open windows floor 2 and 5*/
 
 
 /* F 4 */
-.floor.four .side:nth-of-type(1):before {
+.floor.four .side:nth-of-type(1):before,
+.floor.eight .side:nth-of-type(1):before {
+    /* blinds for flooor 5 and 8 (blinds left to right) */
 	position: absolute;
 	content: "";
 	width: 60%;
@@ -351,7 +357,7 @@ span { /* glass of  the open windows floor 2 and 5*/
 	color: #601d44;
 	z-index: 3;
 	transform: translateZ(1.8vmin);
-	display: none;
+	
 }
 
 .floor.five .side:nth-of-type(1):after {
@@ -396,6 +402,28 @@ span { /* glass of  the open windows floor 2 and 5*/
 	left: 40.5%;
 	width: 19%;
 	background: #0a0a0a;
+}
+
+/* F 7 */
+.floor.seven .side:nth-of-type(1):after {
+    /* last window in stage 7 at front side */
+	display: none;
+}
+
+.floor.seven .side:nth-of-type(1):before {
+    /* two blinds in stage 7 front side */
+	box-shadow: 0.15vmin 0.65vmin 0.25vmin 0.125vmin #0006 inset;
+}
+
+
+/* F 8 */
+.floor.eight .side:nth-of-type(1):after {
+    /* transparent blinds */
+	width: 60%;
+	left: 40%;
+	box-shadow: 0.025vmin 0.65vmin 0.5vmin 0.25vmin #0006 inset;
+	background: repeating-linear-gradient(180deg, black, transparent);
+	background-size: 100% 4%;
 }
 
 
@@ -515,8 +543,9 @@ span { /* glass of  the open windows floor 2 and 5*/
 
 
 /* F 5 */
-.floor.five .side:nth-of-type(3):before{
-	/* window 2 */
+.floor.five .side:nth-of-type(3):before,
+.floor.seven .side:nth-of-type(3):before{
+	/* secand window  */
 	left: 35.25%;
 	width: 34.25%;
 	top: -1px;
@@ -524,7 +553,8 @@ span { /* glass of  the open windows floor 2 and 5*/
 	box-shadow: -1.975vmin 1.75vmin 1.5vmin 0.125vmin #0005 inset, 0.025vmin 1.75vmin 0.4vmin 0.125vmin #0002 inset;
 }
 
-.floor.five .side:nth-of-type(3):after{
+.floor.five .side:nth-of-type(3):after,
+.floor.seven .side:nth-of-type(3):after{
 	/* window 3 */
 	left: 70.75%;
 	width: 29.25%;
@@ -571,6 +601,52 @@ span { /* glass of  the open windows floor 2 and 5*/
 }
 
 
+/* F 8 */
+.floor.eight .side:nth-of-type(3):before {
+    /* first blind in right side */
+	left: 0;
+	background: repeating-linear-gradient(90deg, #101010, transparent), repeating-linear-gradient(90deg, #383e70 0 calc(100% - 0.25vmin), var(--frame) calc(100% - 0.25vmin) 100%);
+	background-size: 2.55vmin 100%, 33vmin 100%;
+}
+
+.floor.eight .side:nth-of-type(3):after {
+    /* ce rideau  se trouve avec les fenetres de l'etage 6*/
+	left: 64vmin;
+	bottom: -19.85vmin;
+	width: 29.65%;
+	background: repeating-linear-gradient(90deg, #1d1e26, transparent), repeating-linear-gradient(90deg, #383e70 0 calc(100% - 0.25vmin), var(--frame) calc(100% - 0.25vmin) 100%);
+	background-size: 1.85vmin 100%, 33vmin 100%;
+}
+
+.floor.eight .side:nth-of-type(3) span {
+    /* shadow of two last blinds in right side  */
+	width: 66%;
+	left: 36%;
+	background: linear-gradient(32deg, #fff0 17%, var(--luz2) 19%), var(--luz1);
+	background: #fff0;
+	background: radial-gradient(ellipse at 30% 72%, var(--luz2) 2.5vmin, #fff0 3.5vmin), radial-gradient(circle at 30% 72%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 34% 73%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 32% 75%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 25% 75%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 21% 80%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(ellipse at 73% 72%, var(--luz2) 3.5vmin, #fff0 4.5vmin), radial-gradient(circle at 69% 70%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 75% 73%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 65% 75%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 82% 75%, var(--luz2) 1vmin, #fff0 1vmin), radial-gradient(circle at 78% 74%, var(--luz2) 1vmin, #fff0 1vmin);
+	background-repeat: no-repeat;
+}
+
+.floor.eight .side:nth-of-type(3) span:before, .floor.eight .side:nth-of-type(3) span:after {
+    /* the middle  glass*/
+	content: "";
+	position: absolute;
+	width: 50.75%;
+	height: 100%;
+	left: -5px;
+	background: linear-gradient(-5deg, #fff0 48.5%, var(--luz2) calc(48.5% + 1px));
+}
+
+.floor.eight .side:nth-of-type(3) span:after {
+    /* the third  glass*/
+	content: "";
+	position: absolute;
+	width: 43%;
+	height: 100%;
+	left: 53%;
+	background: linear-gradient(-5deg, #fff0 75%, var(--luz2) calc(75% + 1px));
+}
 
 
 /*** CACTUS ***/
@@ -748,6 +824,30 @@ i.man:after {
 	content: "";
 }
 
+.eight .side i.man {
+	left: 39.75vmin;
+	bottom: 0vmin;
+	--bush: #363a5c;
+	transform: translateZ(-90vmin);
+	filter: drop-shadow(1.2px 0px 0px #7d83bfcc);
+	color: #7d83bfcc;
+	background: radial-gradient(circle at 55% 0.9vmin, var(--bush) 0 0.35vmin, #fff0 calc(0.375vmin + 1px) 100%),radial-gradient(circle at 35% 0.8vmin, #0a0d29 0 0.5vmin, #fff0 calc(0.5vmin + 1px) 100%), conic-gradient(from 145deg at 50% 1.2vmin, var(--bush) 0 25%, #fff0 0 100%);
+	height: 4.5vmin;
+	width: 1.125vmin;
+}
+
+.eight .side i.man:before {
+	transform: rotate(-19deg);
+	border-right: 1px solid #ffffffab;
+	left: 0.125vmin;
+	width: 0.45vmin;
+	height: 1.85vmin;
+	background: var(--frame);
+	opacity: 0.5;
+	bottom: 1.125vmin;
+}
+
+
 
 /*** CACTUS 2 ***/
 i.cactus2 {
@@ -839,5 +939,46 @@ i.cat + i.cat:after {
 	transform: rotate(-27deg) rotateY(180deg);
 	left: -2.6vmin;
 	bottom: -0.2vmin;
+}
+
+
+/*** PLANTS ***/
+i.plant {
+	position: absolute;
+	background: linear-gradient(90deg, #fff0 38%, var(--luz2) 38% 61%, #fff0 61%), linear-gradient(180deg, #fff0 40%, var(--luz2) 45%);
+	width: 1vmin;
+	height: 3.5vmin;
+	bottom: 0vmin;
+	left: 5vmin;
+	filter: drop-shadow(6vmin 0.5vmin 0px var(--luz3)) drop-shadow(8vmin 0.25vmin 0vmin var(--luz3)) drop-shadow(7vmin -0.25vmin 0vmin var(--luz3));/*color of three flowers in secand glass at front side*/
+}
+
+i.plant:before, i.plant:after {
+	content: "";
+	position: absolute;
+	background: var(--luz2);
+	width: 0.275vmin;
+	height: 1vmin;
+	transform: rotate(-45deg);
+	border-radius: 100% 100% 0 0;
+	box-shadow: 4px -4px 0 -0.05vmin var(--luz2);
+	bottom: 2.25vmin;
+}
+
+i.plant:after {
+	transform: rotateY(180deg) rotate(-45deg) translate(-0.65vmin, -0.35vmin);
+}
+
+.seven i.plant {
+    /* flowers the stage 7 */
+	left: 77%;
+	--luz2: var(--luz3);
+	filter: drop-shadow(-1.95vmin 0.5vmin 0px var(--luz3)) drop-shadow(-4vmin -0.75vmin 0vmin var(--luz3)) drop-shadow(-3vmin 0.25vmin 0vmin var(--luz3));
+	transform: rotateY(180deg) scale(0.85);
+}
+
+.seven i.plant:after {
+	--luz2: var(--luz3);
+	box-shadow: 4px -4px 0 -0.05vmin var(--luz2), 8px -3px 0 -0.05vmin var(--luz2);
 }
 
